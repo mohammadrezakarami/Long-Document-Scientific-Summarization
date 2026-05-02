@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: "SciSum-Qwen"
+message: "If you use this repository, please cite it using the metadata below."
+type: software
+authors:
+  - family-names: "Karami"
+    given-names: "Mohammadreza"
+repository-code: "https://github.com/mohammadrezakarami/Long-Document-Scientific-Summarization"
+url: "https://github.com/mohammadrezakarami/Long-Document-Scientific-Summarization"
+abstract: >
+  Faithful long-document scientific paper summarization with Qwen2.5-3B-Instruct,
+  QLoRA, hierarchical section-aware inference, and claim-level evidence support scoring.
+keywords:
+  - scientific summarization
+  - long-document processing
+  - qlora
+  - evidence retrieval
+  - gradio
+  - fastapi

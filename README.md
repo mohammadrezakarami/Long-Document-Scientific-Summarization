@@ -12,6 +12,7 @@ pinned: false
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Hugging%20Face%20Space-1d4ed8)](https://mokarami-scisum-qwen.hf.space)
 [![Space Repo](https://img.shields.io/badge/HF%20Space-mokarami%2Fscisum--qwen-0f172a)](https://huggingface.co/spaces/mokarami/scisum-qwen)
+[![CI](https://github.com/mohammadrezakarami/Long-Document-Scientific-Summarization/actions/workflows/ci.yml/badge.svg)](https://github.com/mohammadrezakarami/Long-Document-Scientific-Summarization/actions/workflows/ci.yml)
 [![Adapter](https://img.shields.io/badge/QLoRA-Adapter%20Included-0f766e)](models/qwen-arxiv-qlora-colab/adapter_model.safetensors)
 
 Faithful long-document scientific paper summarization with `Qwen2.5-3B-Instruct`, `QLoRA`, hierarchical section-aware inference, and claim-level evidence support scoring.
@@ -170,6 +171,25 @@ Public demo check:
 .venv/bin/python scripts/test_public_space.py
 ```
 
+## API Quickstart
+
+Run the local API:
+
+```bash
+make api
+```
+
+Send a structured summarization request:
+
+```bash
+bash examples/curl_summarize.sh
+```
+
+Reference payload:
+
+- [`examples/api_request.json`](examples/api_request.json)
+- [`examples/curl_summarize.sh`](examples/curl_summarize.sh)
+
 ## Deployment
 
 Public deployment target used for this project:
@@ -185,6 +205,11 @@ HF_TOKEN=... .venv/bin/python scripts/deploy_hf_space.py --repo-id mokarami/scis
 Alternative product path:
 
 - `FastAPI` + Docker via [`Dockerfile`](Dockerfile) and [`render.yaml`](render.yaml)
+
+## CI And Research Metadata
+
+- GitHub Actions CI: [`.github/workflows/ci.yml`](.github/workflows/ci.yml)
+- Citation metadata: [`CITATION.cff`](CITATION.cff)
 
 ## Limitations
 

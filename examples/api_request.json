@@ -1,0 +1,7 @@
+{
+  "title": "Faithful Long-Document Scientific Summarization with Section-Aware Hierarchical Inference",
+  "paper_text": "Abstract:\nScientific papers are difficult to summarize because they are long and section-structured.\n\nIntroduction:\nThis paper studies scientific summarization and aims to preserve faithfulness in long-document settings.\n\nMethod:\nThe approach uses section-aware summarization, hierarchical synthesis, and claim-level evidence retrieval.\n\nResults:\nThe system improves ROUGE-L by 2.4 points over a strong single-pass baseline and reduces unsupported claims in manual review.\n\nConclusion:\nThe method is practical for long scientific documents and improves interpretability through evidence support scoring.",
+  "mode": "hierarchical",
+  "summary_type": "structured",
+  "enable_evidence_support": true
+}
