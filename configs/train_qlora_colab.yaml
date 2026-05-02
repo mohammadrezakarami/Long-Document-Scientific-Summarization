@@ -1,0 +1,40 @@
+model:
+  name: Qwen/Qwen2.5-3B-Instruct
+  load_in_4bit: true
+
+lora:
+  r: 8
+  alpha: 16
+  dropout: 0.05
+  target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+
+training:
+  train_file: data/colab/train_subset.jsonl
+  validation_file: data/colab/valid_subset.jsonl
+  output_dir: models/qwen-arxiv-qlora-colab
+  report_path: reports/colab_training_log.md
+  num_train_epochs: 1
+  learning_rate: 2e-4
+  per_device_train_batch_size: 1
+  per_device_eval_batch_size: 1
+  gradient_accumulation_steps: 4
+  max_seq_length: 2048
+  warmup_ratio: 0.03
+  weight_decay: 0.01
+  lr_scheduler_type: cosine
+  bf16: true
+  gradient_checkpointing: true
+  logging_steps: 5
+  evaluation_strategy: epoch
+  save_strategy: epoch
+  save_total_limit: 1
+  max_train_samples: 300
+  max_eval_samples: 50
+  seed: 42

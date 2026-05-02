@@ -1,0 +1,13 @@
+model_name: Qwen/Qwen2.5-3B-Instruct
+adapter_path: models/qwen-arxiv-qlora-adapter
+generation:
+  max_new_tokens: 512
+  temperature: 0.0
+  top_p: 0.9
+  repetition_penalty: 1.05
+  do_sample: false
+prompting:
+  summary_type: abstract
+  mode: single_pass
+  evidence_aware_prompt: true
+

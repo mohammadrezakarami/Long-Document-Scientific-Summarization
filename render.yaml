@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: scisum-qwen-api
+    env: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    autoDeploy: false
+    envVars:
+      - key: SCISUM_SUMMARY_BACKEND
+        value: heuristic
+      - key: SCISUM_MODEL_NAME
+        value: Qwen/Qwen2.5-3B-Instruct
+      - key: SCISUM_DEVICE
+        value: auto
+      - key: SCISUM_API_HOST
+        value: 0.0.0.0
+      - key: SCISUM_API_PORT
+        value: "8000"

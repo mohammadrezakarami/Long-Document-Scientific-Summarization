@@ -1,0 +1,3 @@
+paper_id,method,prompt_style,faithfulness,coverage,technical_accuracy,conciseness,structure_quality,notes
+sample_0001,textrank,,,,,,,
+sample_0002,textrank,,,,,,,

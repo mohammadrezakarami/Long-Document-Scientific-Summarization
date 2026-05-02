@@ -1,0 +1,49 @@
+dataset:
+  name: ccdv/arxiv-summarization
+  article_field: article
+  abstract_field: abstract
+  title_field:
+  paper_id_field:
+  cache_dir: data/raw/hf_cache
+  use_hf_splits: true
+  streaming: true
+  subset_limits:
+    train: 5000
+    validation: 500
+    test: 500
+
+preprocessing:
+  remove_citation_markers: true
+  remove_reference_section: true
+  remove_figure_and_table_captions: false
+  min_article_chars: 2000
+  min_abstract_chars: 120
+  max_article_chars: 80000
+
+formatting:
+  include_title: true
+  include_section_headers: true
+  keep_sections:
+    - abstract
+    - introduction
+    - related_work
+    - method
+    - experiments
+    - results
+    - discussion
+    - conclusion
+  system_prompt: You are a scientific research assistant. Generate faithful and concise scientific summaries.
+  user_instruction: Summarize the following scientific paper into an abstract-style summary. Focus on the research problem, proposed method, and key findings. Do not invent results.
+
+tokenization:
+  tokenizer_name: Qwen/Qwen2.5-3B-Instruct
+  use_fast: true
+  fallback_chars_per_token: 4.0
+
+outputs:
+  processed_dir: data/processed
+  report_path: reports/dataset_report.md
+  split_filenames:
+    train: train.jsonl
+    validation: valid.jsonl
+    test: test.jsonl

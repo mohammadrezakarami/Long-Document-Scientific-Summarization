@@ -1,0 +1,2 @@
+run_name,method,prompt_style,inference_mode,context_window,evidence_aware_prompt,count,rouge1,rouge2,rougeL,bertscore_f1,bertscore_status,format_validity,field_completion_rate,avg_prediction_words,avg_reference_words,avg_compression_ratio
+baseline_qlora,qwen_qlora,faithful_abstract,,,,10,0.3265,0.0993,0.191,,evaluate_not_installed,0.0,0.0,78.7,126.5,0.711

@@ -1,0 +1,14 @@
+metrics:
+  - rouge
+  - bertscore
+  - format_validity
+  - length_analysis
+manual_review:
+  sample_size: 30
+  rubric:
+    - faithfulness
+    - coverage
+    - technical_accuracy
+    - conciseness
+    - structure_quality
+

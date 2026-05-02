@@ -1,0 +1,15 @@
+services:
+  scisum-api:
+    build: .
+    ports:
+      - "${SCISUM_API_PORT:-8000}:8000"
+    env_file:
+      - .env.example
+
+  scisum-demo:
+    build: .
+    command: ["python", "app/gradio_app.py"]
+    ports:
+      - "${SCISUM_DEMO_PORT:-7860}:7860"
+    env_file:
+      - .env.example

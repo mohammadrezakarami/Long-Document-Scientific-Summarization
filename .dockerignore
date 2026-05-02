@@ -1,0 +1,16 @@
+.venv
+.venv_py314_backup
+__pycache__
+.pytest_cache
+.mypy_cache
+.ruff_cache
+.git
+.DS_Store
+data/raw
+data/processed
+training_logs
+wandb
+mlruns
+reports/real_runs
+reports/longdoc
+*.pyc
